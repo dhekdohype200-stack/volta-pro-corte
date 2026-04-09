@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-neutral-200 font-sans antialiased;
+  }
+}
+
+.saas-card {
+  background-color: #111111;
+  border: 1px solid rgba(38, 38, 38, 0.6);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.saas-sidebar {
+  background-color: #080808;
+  border-right: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.saas-header {
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(38, 38, 38, 0.5);
+}
+
+.glow-red {
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.15);
+}
+
+.glow-green {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+.glow-red-strong {
+  box-shadow: 0 0 40px rgba(220, 38, 38, 0.3);
+}
+
+.metric-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #111111;
+  border: 1px solid rgba(38, 38, 38, 0.6);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.metric-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(64, 64, 64, 1);
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors;
+}
+
